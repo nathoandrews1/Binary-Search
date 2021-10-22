@@ -31,7 +31,7 @@ public class MyArrayList<ArrayType> extends ArrayList<ArrayType> {
    //is more complex and better to learn to create better logical thinking.
   //Binary search relies on the collection being sorted. It will find if the input number is less than
  //or greater than the middle index. If it is higher it splits the stack and searches from the middle to end.
-//If it's lower it splits and searches from start to middle - 1
+//If it's lower it splits and searches from start to (middle - 1)
 
     int binarySearch(ArrayType item, int start, int end)
     {
@@ -42,6 +42,7 @@ public class MyArrayList<ArrayType> extends ArrayList<ArrayType> {
 
         //This If checks to see if the compared value is the same as the middle.
        //If the middle is the same, result = (result == middle ? true : false); <- This is knows as ternary IF
+      //Also Typecasting Comparable below
           if (((Comparable)get(middle)).compareTo((Comparable)item) == 0)
           {
                 result = middle;
